@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Title - Spring 2026</title>
+    <style>
+        /* 全局设置 */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* 容器 */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            min-height: 100vh;
+        }
+
+        /* 顶部导航 */
+        header {
+            border-bottom: 2px solid #8c1515; /* 斯坦福红风格 */
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+            color: #8c1515;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+
+        nav a:hover {
+            color: #8c1515;
+            text-decoration: underline;
+        }
+
+        /* 章节通用样式 */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: #444;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 课程表 (Syllabus) */
+        table.schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table.schedule th, table.schedule td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table.schedule th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+            color: #555;
+        }
+
+        table.schedule tr:hover {
+            background-color: #fdfdfd;
+        }
+
+        /* 团队介绍 (Staff) */
+        .staff-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .staff-card {
+            flex: 1;
+            min-width: 200px;
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+
+        .staff-role {
+            font-size: 0.85em;
+            color: #8c1515;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .staff-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        /* 公告栏 */
+        .announcement {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>CS 123: 课程名称示例</h1>
+        <div class="subtitle">2026年春季学期 | 每周二、四 14:00-15:30 | 教学楼 305</div>
+        
+        <nav>
+            <a href="#">主页</a>
+            <a href="#syllabus">课程大纲</a>
+            <a href="#materials">课件与资料</a>
+            <a href="#projects">大作业</a>
+            <a href="https://piazza.com" target="_blank">讨论区 (Piazza)</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="announcement">
+            <strong>📢 最新通知：</strong> 第一次作业已发布，请查阅 <a href="#">作业页面</a>。 (2026-01-21)
+        </div>
+    </section>
+
+    <section>
+        <h2>课程简介</h2>
+        <p>这里填写课程的详细介绍。例如：本课程旨在介绍强化学习（Reinforcement Learning）的核心概念和算法，涵盖从基础的 MDP 到最新的深度强化学习模型。</p>
+        <p><strong>先修要求：</strong> 线性代数，概率论，Python 编程基础。</p>
+    </section>
+
+    <section>
+        <h2>教学团队</h2>
+        <div class="staff-grid">
+            <div class="staff-card">
+                <div class="staff-role">讲师 (Instructor)</div>
+                <div class="staff-name">教授姓名</div>
+                <div>Office: 301A</div>
+                <div>Email: professor@univ.edu</div>
+            </div>
+            <div class="staff-card">
+                <div class="staff-role">助教 (TA)</div>
+                <div class="staff-name">助教姓名</div>
+                <div>Office: 405B</div>
+                <div>Email: ta@univ.edu</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="syllabus">
+        <h2>课程安排 (Syllabus)</h2>
+        <table class="schedule">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">日期</th>
+                    <th style="width: 45%;">主题</th>
+                    <th style="width: 20%;">课件 (Slides)</th>
+                    <th style="width: 20%;">阅读材料/作业</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Week 1</td>
+                    <td><strong>Lecture 1: 课程介绍与概览</strong></td>
+                    <td><a href="#">[PDF]</a></td>
+                    <td>Reading 1.1</td>
+                </tr>
+                <tr>
+                    <td>Week 2</td>
+                    <td><strong>Lecture 2: 基础理论</strong><br><span style="color:gray; font-size:0.9em;">马尔可夫决策过程 (MDP)</span></td>
+                    <td><a href="#">[PDF]</a></td>
+                    <td>HW1 发布</td>
+                </tr>
+                <tr>
+                    <td>Week 3</td>
+                    <td><strong>Lecture 3: 进阶模型</strong></td>
+                    <td><a href="#">[PDF]</a></td>
+                    <td>Reading 2.3</td>
+                </tr>
+                </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p style="text-align: center; color: #888; font-size: 0.9em; margin-top: 50px;">
+            &copy; 2026 CS 123 Course Staff. Template inspired by Stanford CS224R.
+        </p>
+    </footer>
+</div>
+
+</body>
+</html>
