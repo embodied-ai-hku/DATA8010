@@ -1,146 +1,213 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Title - Spring 2026</title>
+    <title>DATA8010: Embodied AI - Spring 2026</title>
     <style>
-        /* 全局设置 */
+        /* General Reset & Typography */
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Standard academic font stack */
             line-height: 1.6;
             color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-        }
-
-        /* 容器 */
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-            min-height: 100vh;
         }
 
-        /* 顶部导航 */
-        header {
-            border-bottom: 2px solid #8c1515; /* 斯坦福红风格 */
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.2em;
-            color: #8c1515;
-        }
-
-        .subtitle {
-            font-size: 1.1em;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        nav {
-            margin-top: 15px;
-        }
-
-        nav a {
-            margin-right: 20px;
+        a {
+            color: #8C1515; /* Stanford Red / Academic Dark Red */
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 1.05em;
         }
 
-        nav a:hover {
-            color: #8c1515;
+        a:hover {
             text-decoration: underline;
         }
 
-        /* 章节通用样式 */
+        /* Layout Container */
+        .container {
+            max-width: 900px; /* Standard width for readability */
+            margin: 0 auto;
+            padding: 0 20px 50px 20px;
+        }
+
+        /* Header Section */
+        header {
+            padding-top: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        .course-code {
+            font-size: 1.5rem;
+            color: #8C1515;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .term {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Navigation Bar */
+        nav {
+            margin-top: 20px;
+            background: #f4f4f4;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        nav a {
+            margin-right: 25px;
+            font-weight: 600;
+            color: #444;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: #8C1515;
+        }
+
+        /* Sections */
         section {
             margin-bottom: 40px;
         }
 
         h2 {
-            font-size: 1.5em;
-            border-bottom: 1px solid #eee;
+            font-size: 1.75rem;
+            border-bottom: 2px solid #eee;
             padding-bottom: 10px;
-            margin-top: 0;
-            color: #444;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #222;
         }
 
-        /* 链接样式 */
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
         }
 
-        /* 课程表 (Syllabus) */
-        table.schedule {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        table.schedule th, table.schedule td {
-            text-align: left;
-            padding: 12px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        table.schedule th {
-            background-color: #f4f4f4;
-            font-weight: bold;
-            color: #555;
-        }
-
-        table.schedule tr:hover {
-            background-color: #fdfdfd;
-        }
-
-        /* 团队介绍 (Staff) */
-        .staff-grid {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .staff-card {
-            flex: 1;
-            min-width: 200px;
-            background: #fafafa;
+        /* Announcements Box */
+        .announcement {
+            background-color: #fff3f3; /* Light red/pink tint */
+            border: 1px solid #fbdcdc;
             padding: 15px;
             border-radius: 4px;
-            border: 1px solid #eee;
+            color: #b01b1b;
+            margin-bottom: 30px;
         }
 
-        .staff-role {
-            font-size: 0.85em;
-            color: #8c1515;
-            font-weight: bold;
-            text-transform: uppercase;
+        /* Staff Grid */
+        .staff-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .staff-member {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            align-items: center;
+        }
+
+        .staff-photo {
+            width: 80px;
+            height: 80px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin-right: 15px;
+            flex-shrink: 0;
+            /* Replace with real image URL */
+            background-image: url('https://via.placeholder.com/80'); 
+            background-size: cover;
+        }
+
+        .staff-info div {
+            font-size: 0.95rem;
         }
 
         .staff-name {
             font-weight: bold;
-            font-size: 1.1em;
-            margin: 5px 0;
+            font-size: 1.1rem;
+            color: #000;
         }
 
-        /* 公告栏 */
-        .announcement {
-            background-color: #fff8e1;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin-bottom: 20px;
+        .staff-role {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            color: #888;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        /* Schedule Table */
+        table.schedule {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+        }
+
+        table.schedule th {
+            text-align: left;
+            background-color: #f9f9f9;
+            padding: 12px;
+            border-bottom: 2px solid #ddd;
+            color: #555;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        table.schedule td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+
+        table.schedule tr:last-child td {
+            border-bottom: none;
+        }
+
+        .date-col { width: 15%; color: #666; }
+        .topic-col { width: 45%; font-weight: 600; }
+        .mat-col { width: 20%; }
+        .due-col { width: 20%; color: #d00000; font-weight: bold; font-size: 0.9rem; }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            background: #eee;
+            border-radius: 3px;
+            color: #555;
+            margin-right: 5px;
+            font-weight: normal;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: #999;
+            text-align: center;
         }
     </style>
 </head>
@@ -148,85 +215,131 @@
 
 <div class="container">
     <header>
-        <h1>CS 123: 课程名称示例</h1>
-        <div class="subtitle">2026年春季学期 | 每周二、四 14:00-15:30 | 教学楼 305</div>
-        
-        <nav>
-            <a href="#">主页</a>
-            <a href="#syllabus">课程大纲</a>
-            <a href="#materials">课件与资料</a>
-            <a href="#projects">大作业</a>
-            <a href="https://piazza.com" target="_blank">讨论区 (Piazza)</a>
-        </nav>
+        <span class="course-code">HKU DATA8010</span>
+        <h1>Embodied AI: Perception, Representation, and Action</h1>
+        <div class="term">Spring 2026 | Tuesdays 13:30 - 16:20 | Venue: P603 Graduate House</div>
     </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#staff">Staff</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#materials">Materials</a>
+        <a href="#assignments">Assignments</a>
+    </nav>
 
     <section>
         <div class="announcement">
-            <strong>📢 最新通知：</strong> 第一次作业已发布，请查阅 <a href="#">作业页面</a>。 (2026-01-21)
+            <strong>📢 Announcement:</strong> Welcome to DATA8010! The first lecture will be held on January 21st. Please check the syllabus below.
         </div>
     </section>
 
-    <section>
-        <h2>课程简介</h2>
-        <p>这里填写课程的详细介绍。例如：本课程旨在介绍强化学习（Reinforcement Learning）的核心概念和算法，涵盖从基础的 MDP 到最新的深度强化学习模型。</p>
-        <p><strong>先修要求：</strong> 线性代数，概率论，Python 编程基础。</p>
+    <section id="about">
+        <h2>Course Description</h2>
+        <p>
+            This course explores various topics in <strong>Embodied Artificial Intelligence (AI)</strong>, focusing on the perception and representation of the physical world by autonomous agents and their consequent physical interactions. 
+        </p>
+        <p>
+            Specifically, we will cover:
+        </p>
+        <ul>
+            <li>How an agent can infer physical and semantic states of a scene (e.g., via 3D reconstruction and semantic parsing).</li>
+            <li>How these perceptions can be represented to facilitate efficient and explainable reasoning.</li>
+            <li>How actions can be generated to achieve downstream interaction tasks.</li>
+        </ul>
+        <p>
+            <strong>Prerequisites:</strong> Basic knowledge of linear algebra, probability, random processes, optimization, signal processing, and machine learning.
+        </p>
     </section>
 
-    <section>
-        <h2>教学团队</h2>
+    <section id="staff">
+        <h2>Course Staff</h2>
         <div class="staff-grid">
-            <div class="staff-card">
-                <div class="staff-role">讲师 (Instructor)</div>
-                <div class="staff-name">教授姓名</div>
-                <div>Office: 301A</div>
-                <div>Email: professor@univ.edu</div>
+            <div class="staff-member">
+                <div class="staff-photo" style="background-image: url('assets/yang.jpg')"></div> <div class="staff-info">
+                    <div class="staff-role">Instructor</div>
+                    <div class="staff-name">Prof. Yanchao Yang</div>
+                    <div>yanchaoy@hku.hk</div>
+                    <div><a href="https://yanchaoyang.github.io/" target="_blank">Website</a></div>
+                </div>
             </div>
-            <div class="staff-card">
-                <div class="staff-role">助教 (TA)</div>
-                <div class="staff-name">助教姓名</div>
-                <div>Office: 405B</div>
-                <div>Email: ta@univ.edu</div>
+            
+            <div class="staff-member">
+                <div class="staff-photo"></div>
+                <div class="staff-info">
+                    <div class="staff-role">Teaching Assistant</div>
+                    <div class="staff-name">TBD</div>
+                    <div>email@hku.hk</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="syllabus">
-        <h2>课程安排 (Syllabus)</h2>
+    <section id="schedule">
+        <h2>Schedule</h2>
         <table class="schedule">
             <thead>
                 <tr>
-                    <th style="width: 15%;">日期</th>
-                    <th style="width: 45%;">主题</th>
-                    <th style="width: 20%;">课件 (Slides)</th>
-                    <th style="width: 20%;">阅读材料/作业</th>
+                    <th class="date-col">Date</th>
+                    <th class="topic-col">Topic</th>
+                    <th class="mat-col">Materials</th>
+                    <th class="due-col">Deadlines</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Week 1</td>
-                    <td><strong>Lecture 1: 课程介绍与概览</strong></td>
-                    <td><a href="#">[PDF]</a></td>
-                    <td>Reading 1.1</td>
+                    <td>Jan 21</td>
+                    <td>
+                        <span class="tag">Intro</span>
+                        Introduction to Embodied AI & Setup
+                    </td>
+                    <td><a href="#">[Slides]</a></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>Week 2</td>
-                    <td><strong>Lecture 2: 基础理论</strong><br><span style="color:gray; font-size:0.9em;">马尔可夫决策过程 (MDP)</span></td>
-                    <td><a href="#">[PDF]</a></td>
-                    <td>HW1 发布</td>
+                    <td>Jan 28</td>
+                    <td>
+                        <span class="tag">Perception</span>
+                        3D Reconstruction & Neural Radiance Fields
+                    </td>
+                    <td><a href="#">[Slides]</a> <a href="#">[Readings]</a></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>Week 3</td>
-                    <td><strong>Lecture 3: 进阶模型</strong></td>
-                    <td><a href="#">[PDF]</a></td>
-                    <td>Reading 2.3</td>
+                    <td>Feb 04</td>
+                    <td>
+                        <span class="tag">Perception</span>
+                        Semantic Parsing & Scene Understanding
+                    </td>
+                    <td><a href="#">[Slides]</a></td>
+                    <td>HW1 Out</td>
+                </tr>
+                <tr>
+                    <td>Feb 11</td>
+                    <td>
+                        <span class="tag">Representation</span>
+                        State Representation Learning
+                    </td>
+                    <td><a href="#">[Slides]</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Feb 18</td>
+                    <td>
+                        <span class="tag">Action</span>
+                        Imitation Learning & Behavior Cloning
+                    </td>
+                    <td><a href="#">[Slides]</a></td>
+                    <td>HW1 Due</td>
                 </tr>
                 </tbody>
         </table>
     </section>
 
     <footer>
-        <p style="text-align: center; color: #888; font-size: 0.9em; margin-top: 50px;">
-            &copy; 2026 CS 123 Course Staff. Template inspired by Stanford CS224R.
+        <p>
+            &copy; 2026 HKU DATA8010 Course Staff.<br>
+            Musketeers Foundation Institute of Data Science, The University of Hong Kong.
         </p>
     </footer>
 </div>
