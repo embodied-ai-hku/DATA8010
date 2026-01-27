@@ -113,75 +113,63 @@
         }
 
         /* Staff Grid */
-        /* Staff Section Styling - Updated for Bigger Boxes & 2 Columns */
         h3.staff-heading {
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.4rem; /* 标题字号加大 */
-            color: #444;
-            border-left: 4px solid #8C1515;
-            padding-left: 15px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: #666;
+            border-left: 3px solid #8C1515; /* 小红条装饰 */
+            padding-left: 10px;
         }
 
         .staff-grid {
             display: grid;
-            /* 关键修改：
-               1. auto-fit: 如果只有1个元素（老师），它会自动填满整行。
-               2. minmax(350px, 1fr): 每个卡片最小350px宽。
-                  在900px的总宽度下，350*3 > 900，所以一行绝对放不下3个，只能放2个。
-            */
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-            gap: 30px; /* 盒子之间的间距变大 */
-            margin-bottom: 40px;
+            /* 自动适应列数：每列最小250px，如果屏幕够宽就一行放4个，不够就自动折行 */
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .staff-member {
             display: flex;
             align-items: center;
-            background: #fafafa; 
-            padding: 30px; /* 内边距显著增大，让盒子看起来更宽敞 */
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02); /* 加一点微弱的阴影增加质感 */
-            transition: transform 0.2s; /* 鼠标悬停动画效果 */
-        }
-        
-        .staff-member:hover {
-            transform: translateY(-2px); /* 鼠标放上去微微上浮 */
-            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+            background: #fafafa; /* 给每个人加个淡淡的背景框，更整齐 */
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #eee;
         }
 
         .staff-photo {
-            width: 100px; /* 头像变大 (原80px) */
-            height: 100px;
+            width: 70px;
+            height: 70px;
             background-color: #ddd;
             border-radius: 50%;
-            margin-right: 25px; /* 图片和文字距离拉大 */
+            margin-right: 15px;
             flex-shrink: 0;
             background-position: center;
             background-size: cover;
-            background-image: url('https://via.placeholder.com/100'); 
+            /* 默认占位图 */
+            background-image: url('https://via.placeholder.com/70'); 
         }
 
         .staff-info div {
-            font-size: 1.05rem; /* 字体整体调大 */
-            line-height: 1.5;
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
 
         .staff-name {
-            font-weight: 700;
-            font-size: 1.25rem; /* 名字变大 */
-            color: #000;
-            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #222;
         }
 
         .staff-role {
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: #8C1515;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
         /* Schedule Table */
         table.schedule {
