@@ -7,7 +7,7 @@
     <style>
         /* General Reset & Typography */
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Standard academic font stack */
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             margin: 0;
@@ -16,7 +16,7 @@
         }
 
         a {
-            color: #8C1515; /* Stanford Red / Academic Dark Red */
+            color: #8C1515;
             text-decoration: none;
         }
 
@@ -26,7 +26,7 @@
 
         /* Layout Container */
         .container {
-            max-width: 900px; /* Standard width for readability */
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 20px 50px 20px;
         }
@@ -104,7 +104,7 @@
 
         /* Announcements Box */
         .announcement {
-            background-color: #fff3f3; /* Light red/pink tint */
+            background-color: #fff3f3;
             border: 1px solid #fbdcdc;
             padding: 15px;
             border-radius: 4px;
@@ -118,13 +118,12 @@
             margin-bottom: 15px;
             font-size: 1.2rem;
             color: #666;
-            border-left: 3px solid #8C1515; /* 小红条装饰 */
+            border-left: 3px solid #8C1515;
             padding-left: 10px;
         }
 
         .staff-grid {
             display: grid;
-            /* 自动适应列数：每列最小250px，如果屏幕够宽就一行放4个，不够就自动折行 */
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
             gap: 20px;
             margin-bottom: 30px;
@@ -133,7 +132,7 @@
         .staff-member {
             display: flex;
             align-items: center;
-            background: #fafafa; /* 给每个人加个淡淡的背景框，更整齐 */
+            background: #fafafa;
             padding: 15px;
             border-radius: 6px;
             border: 1px solid #eee;
@@ -148,7 +147,6 @@
             flex-shrink: 0;
             background-position: center;
             background-size: cover;
-            /* 默认占位图 */
             background-image: url('https://via.placeholder.com/70'); 
         }
 
@@ -171,6 +169,7 @@
             font-weight: bold;
             margin-bottom: 3px;
         }
+
         /* Schedule Table */
         table.schedule {
             width: 100%;
@@ -203,17 +202,6 @@
         .topic-col { width: 45%; font-weight: 600; }
         .mat-col { width: 20%; }
         .due-col { width: 20%; color: #d00000; font-weight: bold; font-size: 0.9rem; }
-
-        .tag {
-            display: inline-block;
-            padding: 2px 6px;
-            font-size: 0.75rem;
-            background: #eee;
-            border-radius: 3px;
-            color: #555;
-            margin-right: 5px;
-            font-weight: normal;
-        }
 
         /* Footer */
         footer {
@@ -325,123 +313,78 @@
             <tbody>
                 <tr>
                     <td>Jan 20</td>
-                    <td>
-                        <span class="tag">Intro</span>
-                        Introduction to Embodied AI & Setup
-                    </td>
+                    <td>Introduction to Embodied AI & Setup</td>
                     <td><a href="slides/Lecture1.pdf" target="_blank">[Slides]</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Jan 27</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Kinematics, Dynamics, and Simulation Environment
-                    </td>
+                    <td>Kinematics, Dynamics, and Simulation Environment</td>
                     <td><a href="slides/Lecture2.pdf" target="_blank">[Slides]</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Feb 03</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Control for Manipulation and Locomotion
-                    </td>
+                    <td>Control for Manipulation and Locomotion</td>
                     <td><a href="slides/Lecture3.pdf" target="_blank">[Slides]</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Feb 10</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Control for Manipulation and Locomotion & Tutorials on Issac Sim and PyBullet
-                    </td>
+                    <td>Control for Manipulation and Locomotion & Tutorials on Issac Sim and PyBullet</td>
                     <td><a href="slides/Issac Sim Tutorial.pdf" target="_blank">[Isaac Sim]</a>
         &nbsp;|&nbsp; <a href="slides/PyBullet Tutorial.pdf" target="_blank">[PyBullet]</a></td>
                     <td>HW1</td>
                 </tr>
                 <tr>
                     <td>Feb 24</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Motion Planning and Task Planning
-                    </td>
+                    <td>Motion Planning and Task Planning</td>
                     <td><a href="slides/Lecture4.pdf" target="_blank">[Slides]</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Mar 3</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Perception for Embodied AI
-                    </td>
+                    <td>Perception for Embodied AI</td>
                     <td><a href="slides/Lecture5.pdf" target="_blank">[Slides]</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Mar 17</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Tactile Sensing and Multimodal Perception
-                    </td>
+                    <td>Tactile Sensing and Multimodal Perception</td>
                     <td><a href="slides/Lecture6.pdf" target="_blank">[Slides]</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Mar 24</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Tactile Sensing and Multimodal Perception & Tutorials on Metaworld
-                    </td>
+                    <td>Tactile Sensing and Multimodal Perception & Tutorials on Mujoco</td>
                     <td><a href="slides/Tutorial_mujocometaworld.pdf" target="_blank">[Mujoco]</a></td>
                     <td>HW2</td>
                 </tr>
                 <tr>
                     <td>Mar 31</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Reinforcement Learning for Robotics
-                    </td>
+                    <td>Reinforcement Learning for Robotics</td>
                     <td><a href="slides/Lecture7.pdf" target="_blank">[Slides]</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Apr 14</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Reinforcement Learning for Robotics & Group Presentation
-                    </td>
+                    <td>Reinforcement Learning for Robotics & Group Presentation</td>
                     <td><a href="slides/Lecture7.pdf" target="_blank">[Slides]</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Apr 21</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Imitation Learning and Behavior Cloning
-                    </td>
+                    <td>Imitation Learning and Behavior Cloning</td>
                     <td><a href="slides/Lecture8.pdf" target="_blank">[Slides]</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Apr 28</td>
-                    <td>
-                        <span class="tag">Robotics</span>
-                        Imitation Learning and Behavior Cloning
-                    </td>
+                    <td>Imitation Learning and Behavior Cloning & Tutorials on LIBERO</td>
                     <td><a href="slides/Lecture8.pdf" target="_blank">[Slides]</a></td>
-                    <td></td>
+                    <td>HW3</td>
                 </tr>
-                <!-- <tr>
-                    <td>Feb 18</td>
-                    <td>
-                        <span class="tag">Action</span>
-                        Imitation Learning & Behavior Cloning
-                    </td>
-                    <td><a href="#">[Slides]</a></td>
-                    <td>HW1 Due</td>
-                </tr>
-                </tbody> -->
+            </tbody>
         </table>
     </section>
 
